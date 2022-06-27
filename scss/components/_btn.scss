@@ -1,0 +1,28 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 200px;
+  min-height: 50px;
+
+  font-weight: 700;
+  color: var(--text-color-alt);
+
+  transition: background-color 250ms var(--cubic-function);
+
+  background-color: var(--text-colot-accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-color-focus);
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}

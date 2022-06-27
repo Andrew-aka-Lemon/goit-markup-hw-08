@@ -1,0 +1,88 @@
+/* ========================FOOTER====================== */
+.footer {
+  background-color: var(--text-color-footer);
+
+  &--alignment {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+}
+
+/* НАШІ СОЦ МЕРЕЖІ */
+.social__join {
+  color: var(--text-color-alt);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  &--mb {
+    margin-bottom: 20px;
+  }
+}
+
+/* Подпишитесь на рассылку */
+
+.sign-up--alightment {
+  margin-left: auto;
+}
+
+.sign-up__text {
+  margin-bottom: 20px;
+
+  color: var(--text-color-alt);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.sign-up__form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-up__input {
+  display: block;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  background-color: transparent;
+  color: var(--text-color-alt);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.btn--submit-email {
+  margin-left: 12px;
+
+  background-color: var(--btn-color-social-focus);
+
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: var(--text-color-alt);
+}
+
+.bnt__icon--submit {
+  margin-left: 10px;
+}
