@@ -7,12 +7,24 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>ДЗ-7: Рефакторинг</title>
+    <title>ДЗ-8: MediaRequest - FINAL</title>
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="mob-menu">
+        <button type="button" class="mob-menu-btn">
+          <svg width="40" heigth="40">
+            <use
+              href="./images/icon/icons.svg#icon-mob_menu"
+              class="mob-menu-btn__menu-icon"
+            ></use>
+            <use
+              href="./images/icon/icons.svg#icon-mob_menu_close"
+              class="mob-menu-btn__close-icon"
+            ></use>
+          </svg>
+        </button>
         <ul class="navigation__list--mob list">
           <li class="navigation__item--mob">
             <a
@@ -55,17 +67,17 @@
             </li>
           </ul>
           <ul class="socials-mobile list">
-            <li class="socials-mobile__item">
-              <a href="" class="socials-mobile__link">Instagram</a>
+            <li class="socials-mobile__item ">
+              <a href="" class="socials-mobile__link socials-mobile__link--first link">Instagram</a>
             </li>
             <li class="socials-mobile__item">
-              <a href="" class="socials-mobile__link">Twitter</a>
+              <a href="" class="socials-mobile__link link">Twitter</a>
             </li>
             <li class="socials-mobile__item">
-              <a href="" class="socials-mobile__link">Facebook</a>
+              <a href="" class="socials-mobile__link link">Facebook</a>
             </li>
             <li class="socials-mobile__item">
-              <a href="" class="socials-mobile__link">LinkedIn</a>
+              <a href="" class="socials-mobile__link link">LinkedIn</a>
             </li>
           </ul>
         </div>
@@ -77,18 +89,7 @@
           ><span class="logo logo--accent">Web</span
           >Studio</a
         >
-        <button type="button" class="mob-menu-btn">
-          <svg width="40" heigth="40">
-            <use
-              href="./images/icon/icons.svg#icon-mob_menu"
-              class="mob-menu-btn__menu-icon"
-            ></use>
-            <use
-              href="./images/icon/icons.svg#icon-mob_menu_close"
-              class="mob-menu-btn__close-icon"
-            ></use>
-          </svg>
-        </button>
+        
         <nav class="navigation">
           <a href="./index.html" class="logo logo--rm link"
             ><span class="logo logo--accent">Web</span
@@ -902,5 +903,6 @@
     </div> -->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
