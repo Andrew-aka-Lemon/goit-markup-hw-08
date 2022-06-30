@@ -4,63 +4,26 @@
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .header {
   background-color: var(--text-color-alt);
+  padding-top: 24px;
+  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
-
-  @media screen and (max-width: $mobile) {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-}
-
-.mobile-menu-btn {
-  @media screen and (max-width: $mobile) {
-    width: 40px;
-    height: 40px;
-
-    background-color: transparent;
-  }
-}
-
-.header__menu {
-  @media screen and (max-width: $mobile) {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    // width: 100vw;
-    // height: 100vh;
-
-    padding: 48px 40px;
-
-    background-color: var(--text-color-alt);
-
-    text-align: left;
-
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
 }
 
 .navigation {
+  display: flex;
+  align-items: center;
+
   &__list {
+    display: flex;
+    align-items: center;
   }
 
-  &__item {
-    @media screen and (max-width: $mobile) {
-      display: block;
-      margin-bottom: 32px;
-
-      &:last-child {
-        margin-bottom: 302px;
-      }
-    }
+  &__item:not(:last-child) {
+    margin-right: 50px;
   }
 
   &__link {
@@ -78,21 +41,20 @@
   }
 }
 
+// хотів би вкласти в .navigation, але сказали макс 2 вкладеності =(
 .navigation__link--current-page {
   color: var(--text-colot-accent);
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -34px;
 
-  @media screen and (min-width: 481px) {
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: -34px;
-
-      width: 100%;
-      height: 4px;
-      background-color: var(--btn-color-social-focus);
-      border-radius: 2px;
-    }
+    width: 100%;
+    height: 4px;
+    background-color: var(--btn-color-social-focus);
+    border-radius: 2px;
   }
 }
 
@@ -102,27 +64,22 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
-  @media screen and (max-width: $mobile) {
-    font-size: 40px;
-    line-height: 1.175;
-  }
 }
 
 .contacts {
-  @media screen and (max-width: $mobile) {
-    &__link {
-      margin-bottom: 32px;
-      &:last-child {
-        margin-bottom: 64px;
-      }
-    }
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
   }
 
   &__link {
-    display: block;
-
     color: var(--text-color-secondary);
+
+    display: flex;
+    align-items: center;
 
     transition-property: color;
     transition-duration: 250ms;
@@ -136,10 +93,7 @@
   }
 
   &__icon {
-    @media screen and (max-width: $mobile) {
-      display: none;
-    }
-
+    margin-right: 10px;
     fill: currentColor;
   }
 }

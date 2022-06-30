@@ -21,17 +21,9 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 /* --- Прибираємо чорний аутлайн при фокусі --- */
 * {
   outline: none;
-}
-
-button {
-  border: none;
-  margin: 0;
-  padding: 0;
 }

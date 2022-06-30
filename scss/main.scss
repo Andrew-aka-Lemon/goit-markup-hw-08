@@ -1,5 +1,4 @@
 @import "./utils/variables";
-@import "./utils/mixin";
 @import "./utils/normalise";
 @import "./utils/reset";
 @import "./utils/visually-hidden";
@@ -9,19 +8,19 @@
 @import "./common/section";
 
 @import "./components/logo";
-// @import "./components/btn";
-// @import "./components/general_title";
+@import "./components/btn";
+@import "./components/general_title";
 @import "./components/header";
-// @import "./components/socials";
-// @import "./components/footer";
-// @import "./components/modal";
-// @import "./components/address";
+@import "./components/socials";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/address";
 
-// @import "./layouts/hero";
+@import "./layouts/hero";
 @import "./layouts/what-do-we-do";
-// @import "./layouts/preferences";
-// @import "./layouts/out-team";
-// @import "./layouts/our-clients";
+@import "./layouts/preferences";
+@import "./layouts/out-team";
+@import "./layouts/our-clients";
 
-// @import "./layouts/filter-btn";
-// @import "./layouts/gallery";
+@import "./layouts/filter-btn";
+@import "./layouts/gallery";

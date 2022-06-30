@@ -1,19 +1,8 @@
 /* універсальний контейнер для всіх блоків */
 
 .container {
+  width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  @media screen and (min-width: 481px) {
-    width: $mobile;
-  }
-
-  @media screen and (min-width: 769px) {
-    width: $tablet;
-  }
-
-  @media screen and (min-width: 1201px) {
-    width: $desktop;
-  }
 }
