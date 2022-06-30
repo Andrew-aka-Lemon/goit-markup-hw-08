@@ -12,8 +12,13 @@
   }
 
   &--rm {
-    margin-right: 93px;
+    margin-right: 88px;
+    @include desktop {
+      margin-right: 93px;
+    }
   }
+
+  
 
   &--accent {
     color: var(--text-colot-accent);
@@ -21,7 +26,7 @@
   &--light {
     display: inline-block;
     color: var(--text-color-alt);
-    
+
     margin-bottom: 20px;
     margin-right: 0;
   }
