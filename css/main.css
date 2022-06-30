@@ -180,6 +180,9 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 /* --- Прибираємо чорний аутлайн при фокусі --- */
@@ -503,14 +506,34 @@ body {
 
 /* універсальний контейнер для всіх блоків */
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 
 .section {
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-bottom: 94px;
+  }
 }
 
 .gallery-section {
@@ -1171,8 +1194,8 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 202px;
-  padding-bottom: 198px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: #c4c4c4;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/studio/bgr-office.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/bgr-office.jpg);
@@ -1180,24 +1203,37 @@ body {
   background-position: center;
   background-size: cover;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 .hero__title {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
-  max-width: 696px;
+  max-width: 360px;
   color: var(--text-color-alt);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .btn--hero {
   margin-right: auto;
   margin-left: auto;
+  line-height: 1.88;
 }
-
 /* ========================ЧЕМ МЫ ЗАНИМАЕМСЯ====================== */
 .whatdowedo__list {
   display: -webkit-box;
@@ -1239,15 +1275,38 @@ body {
 
 /* ========================PREFERENCES====================== */
 .preferences {
-  padding-top: 96px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .preferences {
+    padding-top: 96px;
+  }
 }
 .preferences__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
 }
-.preferences__item:not(:last-child) {
-  margin-right: 30px;
+.preferences__item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .preferences__item {
+    width: calc((100% - 30px) / 2);
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .preferences__item {
+    width: calc((100% - 90px) / 4);
+    max-width: 270px;
+  }
 }
 .preferences__name {
   margin-bottom: 10px;
@@ -1259,12 +1318,21 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+@media screen and (max-width: 479px) {
+  .preferences__name {
+    text-align: center;
+  }
+}
 .preferences__describe {
   min-width: 270px;
-  min-height: 75px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .preferences__describe {
+    min-height: 75px;
+  }
 }
 .preferences__icon {
   display: -webkit-box;
@@ -1277,7 +1345,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: var(--bgc-color-secondary);
   border-radius: 4px;
