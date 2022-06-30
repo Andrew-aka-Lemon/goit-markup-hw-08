@@ -1,4 +1,10 @@
 /* ========================ЧЕМ МЫ ЗАНИМАЕМСЯ====================== */
+.whatdowedo {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
 .whatdowedo__list {
   display: flex;
 }
