@@ -1,5 +1,13 @@
 .address--mr {
-  margin-right: 70px;
+  @include desktop {
+    margin-right: 70px;
+  }
+}
+
+.address_map {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 
 .address__link {
@@ -25,5 +33,9 @@
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }

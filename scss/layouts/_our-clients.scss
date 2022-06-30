@@ -1,22 +1,36 @@
 /* ======================== НАШИ КЛИЕНТЫ ====================== */
 .client {
-  padding-top: 94px;
+  padding-top: 60px;
 
-  &__list {
-    margin-top: 50px;
-    display: flex;
+  @include desktop {
+    padding-top: 94px;
   }
 
-  &__item:not(:nth-child(6)) {
-    margin-right: 30px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__item {
+    width: calc((100% - 30px) / 2);
+
+    @include tablet {
+      width: calc((100% - 60px) / 3);
+    }
+    @include desktop {
+      width: calc((100% - 150px) / 6);
+    }
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 92px;
+
+    // width: 170px;
+    // height: 92px;
 
     color: var(--icon-company-fill);
 

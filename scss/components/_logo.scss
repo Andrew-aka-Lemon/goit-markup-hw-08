@@ -2,9 +2,14 @@
   color: var(--logo-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
+
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 
   &--rm {
     margin-right: 93px;
@@ -16,6 +21,7 @@
   &--light {
     display: inline-block;
     color: var(--text-color-alt);
+    
     margin-bottom: 20px;
     margin-right: 0;
   }
