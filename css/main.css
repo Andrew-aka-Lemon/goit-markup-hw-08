@@ -208,6 +208,10 @@ button {
   width: 1px;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* cyrillic-ext */
 @font-face {
   font-family: "Raleway";
@@ -818,8 +822,49 @@ body {
   }
 }
 
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 48px 40px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: auto;
+  min-width: 320px;
+  background-color: var(--text-color-alt);
+  -webkit-transition: opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function), -webkit-transform 350ms var(--cubic-function);
+  transition: opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function), -webkit-transform 350ms var(--cubic-function);
+  transition: transform 350ms var(--cubic-function), opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function);
+  transition: transform 350ms var(--cubic-function), opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function), -webkit-transform 350ms var(--cubic-function);
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+.mob-menu.is-hidden {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  -webkit-transition: opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function), -webkit-transform 350ms var(--cubic-function);
+  transition: opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function), -webkit-transform 350ms var(--cubic-function);
+  transition: transform 350ms var(--cubic-function), opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function);
+  transition: transform 350ms var(--cubic-function), opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function), -webkit-transform 350ms var(--cubic-function);
+}
+
 .mob-menu-btn {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 15px;
   display: -webkit-box;
@@ -839,38 +884,38 @@ body {
   }
 }
 
+.mob-menu-btn__menu-icon {
+  opacity: 0;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+.mob-menu.is-hidden + .mob-menu-btn .mob-menu-btn__menu-icon {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.mob-menu.is-hidden + .mob-menu-btn .mob-menu-btn__close-icon {
+  opacity: 0;
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+}
+
+.mob-menu-btn__close-icon,
+.mob-menu-btn__menu-icon {
+  -webkit-transition: opacity 350ms var(--cubic-function), -webkit-transform 250ms var(--cubic-function);
+  transition: opacity 350ms var(--cubic-function), -webkit-transform 250ms var(--cubic-function);
+  transition: opacity 350ms var(--cubic-function), transform 250ms var(--cubic-function);
+  transition: opacity 350ms var(--cubic-function), transform 250ms var(--cubic-function), -webkit-transform 250ms var(--cubic-function);
+}
+
 @media screen and (min-width: 768px) {
   .logo--mobile {
     display: none;
   }
 }
 
-.mob-menu-btn__close-icon {
-  display: none;
-}
-
-.mob-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 48px 40px;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  background-color: var(--text-color-alt);
-}
-
-.navigation__item--mob:not(:last-child) {
+.navigation__item--mob {
   margin-bottom: 32px;
 }
 
