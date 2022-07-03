@@ -842,6 +842,7 @@ body {
   z-index: 1;
   overflow: auto;
   min-width: 320px;
+  height: 100%;
   background-color: var(--text-color-alt);
   -webkit-transition: opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function), -webkit-transform 350ms var(--cubic-function);
   transition: opacity 350ms var(--cubic-function), visibility 350ms var(--cubic-function), -webkit-transform 350ms var(--cubic-function);
@@ -877,6 +878,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
+}
+.mob-menu.is-hidden + .mob-menu-btn {
+  position: absolute;
 }
 @media screen and (min-width: 768px) {
   .mob-menu-btn {
