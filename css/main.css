@@ -1226,6 +1226,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
@@ -1238,6 +1239,11 @@ body {
           transition-duration: 750ms;
   -webkit-transition-timing-function: cubic-bezier(0, 0.99, 1, 0.99);
           transition-timing-function: cubic-bezier(0, 0.99, 1, 0.99);
+}
+@media screen and (max-width: 480px) {
+  .backdrop {
+    overflow-y: auto;
+  }
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -1257,11 +1263,10 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 5;
   opacity: 1;
   visibility: visible;
   padding: 40px;
-  width: 528px;
-  height: 581px;
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1275,14 +1280,31 @@ body {
   -webkit-transition-timing-function: cubic-bezier(0, 0.99, 1, 0.99);
           transition-timing-function: cubic-bezier(0, 0.99, 1, 0.99);
 }
+@media screen and (max-width: 1199px) {
+  .modal-window {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    padding: 40px;
+    height: 581px;
+  }
+}
 .modal-window__header {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 30px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color-main);
+}
+@media screen and (min-width: 768px) {
+  .modal-window__header {
+    line-height: 23px;
+  }
 }
 
 .close-modal-btn {
@@ -1362,38 +1384,60 @@ body {
 }
 
 .modal-input__comment::-webkit-input-placeholder {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.1428571429;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-input__comment::-moz-placeholder {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.1428571429;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-input__comment:-ms-input-placeholder {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.1428571429;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-input__comment::-ms-input-placeholder {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.1428571429;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-input__comment::placeholder {
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.1428571429;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+@media screen and (min-width: 1200px) {
+  .modal-input__comment::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .modal-input__comment::-moz-placeholder {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .modal-input__comment:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .modal-input__comment::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .modal-input__comment::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .modal-input__input:focus + .modal-input__icon {
@@ -1441,10 +1485,29 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: var(--text-color-secondary);
+}
+@media screen and (min-width: 1200px) {
+  .modal-input__privacy-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.modal-input__privacy-text-agree {
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+  color: var(--text-color-secondary);
+}
+@media screen and (min-width: 1200px) {
+  .modal-input__privacy-text-agree {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-input__privacy-text::before {
@@ -1454,6 +1517,8 @@ body {
   height: 15px;
   border: 2px solid var(--text-color-main);
   border-radius: 3px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-transition: border-color 250ms var(--cubic-function);
   transition: border-color 250ms var(--cubic-function);
 }
@@ -1470,8 +1535,8 @@ body {
 }
 
 .modal-input__privacy-link {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1480,6 +1545,12 @@ body {
   transition: color 250ms var(--cubic-function), -webkit-transform 250ms var(--cubic-function);
   transition: color 250ms var(--cubic-function), transform 250ms var(--cubic-function);
   transition: color 250ms var(--cubic-function), transform 250ms var(--cubic-function), -webkit-transform 250ms var(--cubic-function);
+}
+@media screen and (min-width: 1200px) {
+  .modal-input__privacy-link {
+    line-height: 1.71;
+    font-size: 14px;
+  }
 }
 
 .modal-input__privacy-link:hover,
