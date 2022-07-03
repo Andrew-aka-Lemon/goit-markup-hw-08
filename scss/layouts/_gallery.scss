@@ -2,14 +2,18 @@
 .gallery-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  gap: 30px;
 
   &__item {
-    flex-basis: calc(100% / 3 - 30px);
-    /* margin: 15px; */
-    margin-right: 30px;
-    margin-bottom: 30px;
+    width: 100%;
+    max-width: 480px;
+    @include tablet {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include desktop {
+      flex-basis: calc((100% - 60px) / 3);
+    }
   }
 
   &__link {
@@ -51,15 +55,22 @@
   }
 
   &__overlay {
-    padding: 63px 24px;
+    padding: 77px 24px;
 
+    @include tablet {
+      padding: 49px 24px;
+    }
+
+    @include desktop {
+      padding: 63px 24px;
+    }
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
-    transform: translate(0%, 100%);
+    transform: translate(0%, 101%);
 
     transition-property: transform;
     transition-duration: 250ms;
@@ -67,6 +78,12 @@
 
     background-color: rgba(33, 150, 243, 0.9);
     font-size: 18px;
+    @media screen and (max-width: 370px) {
+      padding: 43px 24px;
+
+      font-size: 15px;
+    }
+
     line-height: 1.56;
     letter-spacing: 0.03em;
 
@@ -81,5 +98,11 @@
   &__img-box {
     position: relative;
     overflow: hidden;
+  }
+}
+
+.gallery-grid__item:first-child .gallery-grid__text {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 146px;
   }
 }

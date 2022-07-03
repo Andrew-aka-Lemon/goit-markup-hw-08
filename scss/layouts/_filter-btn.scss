@@ -1,8 +1,18 @@
 /* ======================== fiter buttons ====================== */
 .filter-btns {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @include desktop {
+    margin-bottom: 50px;
+  }
 
   &__btn {
     padding: 6px 22px;
@@ -33,7 +43,10 @@
     }
   }
 
-  &__item:not(:last-child) {
-    margin-right: 8px;
+  &__item {
+    margin-bottom: 15px;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 }

@@ -12,7 +12,84 @@
   </head>
   <body>
     <header class="header">
+      <div class="mob-menu is-hidden">
+        <ul class="navigation__list--mob list">
+          <li class="navigation__item--mob">
+            <a
+              href="./index.html"
+              class="navigation__link--mob  link"
+              >Студия</a
+            >
+          </li>
+          <li class="navigation__item--mob">
+            <a
+              href="./portfolio.html"
+              class="navigation__link--mob navigation__link--current-page link"
+              >Портфолио</a
+            >
+          </li>
+          <li class="navigation__item--mob">
+            <a href="" class="navigation__link--mob link"
+              >Контакты</a
+            >
+          </li>
+        </ul>
+        <div class="contacts-links--mob">
+          <ul class="contacts--mob list">
+            <li class="contacts__item--mob">
+              <a
+                href="tel:+380961111111"
+                class="contacts__link--mob link"
+              >
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="contacts__item--mob">
+              <a
+                href="mailto:info@devstudio.com"
+                class="contacts__link--mob link"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="socials-mobile list">
+            <li class="socials-mobile__item ">
+              <a href="" class="socials-mobile__link socials-mobile__link--first link">Instagram</a>
+            </li>
+            <li class="socials-mobile__item">
+              <a href="" class="socials-mobile__link link">Twitter</a>
+            </li>
+            <li class="socials-mobile__item">
+              <a href="" class="socials-mobile__link link">Facebook</a>
+            </li>
+            <li class="socials-mobile__item">
+              <a href="" class="socials-mobile__link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="button" class="mob-menu-btn">
+          <svg width="40" heigth="40">
+            <use
+              href="./images/icon/icons.svg#icon-mob_menu"
+              class="mob-menu-btn__menu-icon"
+            ></use>
+            <use
+              href="./images/icon/icons.svg#icon-mob_menu_close"
+              class="mob-menu-btn__close-icon"
+            ></use>
+          </svg>
+      </button>
       <div class="container">
+        <a
+          href="./index.html"
+          class="logo logo--rm logo--mobile link"
+          ><span class="logo logo--accent">Web</span
+          >Studio</a
+        >
+        
         <nav class="navigation">
           <a href="./index.html" class="logo logo--rm link"
             ><span class="logo logo--accent">Web</span
@@ -22,14 +99,14 @@
             <li class="navigation__item">
               <a
                 href="./index.html"
-                class="navigation__link navigation__link--current-page link"
+                class="navigation__link  link"
                 >Студия</a
               >
             </li>
             <li class="navigation__item">
               <a
                 href="./portfolio.html"
-                class="navigation__link link"
+                class="navigation__link navigation__link--current-page link"
                 >Портфолио</a
               >
             </li>
@@ -355,105 +432,111 @@
     <footer class="footer">
       <div class="container">
         <div class="footer footer--alignment">
-          <div class="address address--mr">
-            <a
-              href="./index.html"
-              class="logo logo--light link"
-              ><span class="logo logo--accent">Web</span
-              >Studio</a
-            >
-            <address>
-              <ul class="list">
-                <li class="address__item">
-                  <a
-                    href="https://goo.gl/maps/F9pcSYnHc2C2oxdA9"
-                    target="_blank"
-                    class="address__link address__link--light link"
-                    >г. Киев, пр-т Леси Украинки, 26</a
-                  >
+          <div class="address-social-tab">
+            <div class="address address--mr">
+              <div>
+                <a
+                  href="./index.html"
+                  class="logo logo--light link"
+                  ><span class="logo logo--accent">Web</span
+                  >Studio</a
+                >
+                <address class="address_map">
+                  <ul class="list">
+                    <li class="address__item">
+                      <a
+                        href="https://goo.gl/maps/F9pcSYnHc2C2oxdA9"
+                        target="_blank"
+                        class="address__link address__link--light link"
+                        >г. Киев, пр-т Леси Украинки, 26</a
+                      >
+                    </li>
+                    <li class="address__item">
+                      <a
+                        href="mailto:info@example.com"
+                        class="address__link link"
+                        >info@example.com</a
+                      >
+                    </li>
+                    <li class="address__item">
+                      <a
+                        href="tel:+380991111111"
+                        class="address__link link"
+                        >+38 099 111 11 11</a
+                      >
+                    </li>
+                  </ul>
+                </address>
+              </div>
+            </div>
+            <div class="social">
+              <p class="social__join social__join--mb">
+                присоединяйтесь
+              </p>
+              <ul
+                class="social__list social__list--mb list"
+              >
+                <li class="social__item">
+                  <a href="" class="social__link link">
+                    <svg
+                      width="20"
+                      height="20"
+                      class="social__icon social__icon--dark"
+                    >
+                      <use
+                        href="./images/icon/icons.svg#icon-instagram"
+                      ></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="address__item">
-                  <a
-                    href="mailto:info@example.com"
-                    class="address__link link"
-                    >info@example.com</a
-                  >
+                <li class="social__item">
+                  <a href="" class="social__link">
+                    <svg
+                      width="20"
+                      height="20"
+                      class="social__icon social__icon--dark"
+                    >
+                      <use
+                        href="./images/icon/icons.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="address__item">
-                  <a
-                    href="tel:+380991111111"
-                    class="address__link link"
-                    >+38 099 111 11 11</a
-                  >
+                <li class="social__item">
+                  <a href="" class="social__link">
+                    <svg
+                      width="20"
+                      height="20"
+                      class="social__icon social__icon--dark"
+                    >
+                      <use
+                        href="./images/icon/icons.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link">
+                    <svg
+                      width="20"
+                      height="20"
+                      class="social__icon social__icon--dark"
+                    >
+                      <use
+                        href="./images/icon/icons.svg#icon-linkedin"
+                      ></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
-          </div>
-          <div class="social">
-            <p class="social__join social__join--mb">
-              присоединяйтесь
-            </p>
-            <ul class="social__list list">
-              <li class="social__item">
-                <a href="" class="social__link link">
-                  <svg
-                    width="20"
-                    height="20"
-                    class="social__icon social__icon--dark"
-                  >
-                    <use
-                      href="./images/icon/icons.svg#icon-instagram"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg
-                    width="20"
-                    height="20"
-                    class="social__icon social__icon--dark"
-                  >
-                    <use
-                      href="./images/icon/icons.svg#icon-twitter"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg
-                    width="20"
-                    height="20"
-                    class="social__icon social__icon--dark"
-                  >
-                    <use
-                      href="./images/icon/icons.svg#icon-facebook"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="" class="social__link">
-                  <svg
-                    width="20"
-                    height="20"
-                    class="social__icon social__icon--dark"
-                  >
-                    <use
-                      href="./images/icon/icons.svg#icon-linkedin"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            </div>
           </div>
           <div class="sign-up sign-up--alightment">
-            <p class="sign-up__text">
+            <p class="sign-up__text sign-up__text--mb">
               Подпишитесь на рассылку
             </p>
             <form class="sign-up__form">
-              <label
+              <label class="sign-up__form-label"
                 ><input
                   type="email"
                   class="sign-up__input"
@@ -480,5 +563,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
