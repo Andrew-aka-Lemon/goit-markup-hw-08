@@ -7,20 +7,38 @@
   padding-top: 118px;
   padding-bottom: 118px;
 
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/studio/bgr-office-mob.jpg);
+
+  @include retina {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/studio/bgr-office-mob-x2.jpg);
+  }
+
   @include tablet {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/studio/bgr-office-tab.jpg);
+
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/studio/bgr-office-tab-x2.jpg);
+    }
   }
 
   @include desktop {
     padding-top: 200px;
     padding-bottom: 200px;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/studio/bgr-office.jpg);
+
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/studio/bgr-office-x2.jpg);
+    }
   }
 
-  background-color: #c4c4c4;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/studio/bgr-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
