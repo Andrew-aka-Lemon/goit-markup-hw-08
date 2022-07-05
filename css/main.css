@@ -182,7 +182,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 /* --- Прибираємо чорний аутлайн при фокусі --- */
@@ -1916,6 +1915,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 92px;
   color: var(--icon-company-fill);
   border: 1px solid rgb(175, 177, 184);
   border-radius: 4px;
@@ -1988,8 +1988,10 @@ body {
   color: var(--text-color-alt);
   background-color: var(--text-colot-accent);
 }
-.filter-btns__item {
-  margin-bottom: 15px;
+@media screen and (max-width: 767px) {
+  .filter-btns__item {
+    margin-bottom: 15px;
+  }
 }
 .filter-btns__item:not(:last-child) {
   margin-right: 8px;
