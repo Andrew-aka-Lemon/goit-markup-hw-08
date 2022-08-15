@@ -238,8 +238,7 @@
 
 .mob-menu-btn__close-icon,
 .mob-menu-btn__menu-icon {
-  transition: opacity 350ms var(--cubic-function), 
-  transform 250ms var(--cubic-function);
+  transition: opacity 350ms var(--cubic-function), transform 250ms var(--cubic-function);
 }
 
 .logo--mobile {
@@ -267,6 +266,7 @@
 
 .contacts__item--mob {
   margin-bottom: 32px;
+
   &:last-child {
     margin-bottom: 64px;
 
@@ -283,11 +283,19 @@
 }
 .contacts__link--mob {
   color: inherit;
+
+  @media screen and (max-width: 390px) {
+    font-size: 26px;
+  }
 }
 
 .socials-mobile {
   display: flex;
   justify-content: flex-start;
+
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
 }
 .socials-mobile__item {
   &:not(:last-child) {
@@ -299,6 +307,10 @@
   font-size: 18px;
   line-height: calc(22 / 18);
   letter-spacing: 0.02em;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+  }
 }
 .socials-mobile__link {
   padding: 0 10px;
